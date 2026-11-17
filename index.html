@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+  <title>Bolzplatz – Fußball</title>
+  <meta name="description" content="Einfaches 3D-Fußballspiel mit Spiel- und Trainingsmodus. Läuft im Browser und lässt sich als App installieren.">
+  <meta name="theme-color" content="#0b5d2a">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <canvas id="c"></canvas>
+
+  <div id="hud" class="hidden">
+    <div id="score"><span class="team t0">BLAU</span><span id="sc">0 : 0</span><span class="team t1">ROT</span><span id="clock">05:00</span></div>
+    <div id="trainInfo" class="hidden"></div>
+    <div id="topbtns">
+      <button id="bLegend" title="Steuerung (H)">?</button>
+      <button id="bPause" title="Pause (P)">II</button>
+      <button id="bFull" title="Vollbild">⛶</button>
+    </div>
+    <canvas id="mini" width="168" height="110"></canvas>
+    <div id="banner"></div>
+    <div id="power"><div class="pw pw0"><i></i></div><div class="pw pw1"><i></i></div></div>
+    <div id="hint"></div>
+  </div>
+
+  <div id="touch"></div>
+  <div id="menu" class="hidden"></div>
+  <div id="overlay" class="hidden"></div>
+  <div id="rotate"><div>📱↻</div><p>Bitte Gerät quer halten</p></div>
+
+  <noscript>Bitte JavaScript aktivieren, um das Spiel zu starten.</noscript>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
